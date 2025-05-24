@@ -1,0 +1,53 @@
+
+
+import objetos2.*
+
+test "el rojo es un color fuerte"{
+    assert.that(rojo.fuerte())
+}
+
+test "el celeste no es un color fuerte"{
+    assert.notThat(celeste.fuerte())
+}
+
+test "se puede modificar el peso del muñeco" {
+    munieco.peso(600)
+    assert.equals(600, munieco.peso())
+}
+
+test "el peso original del muñeco es 100" {
+  assert.equals(100, munieco.peso())
+}
+
+test "a estefania le gusta la remera" {
+  assert.that(estefania.leGusta(remera))
+}
+
+test "a estefania no le gusta el munieco" {
+  assert.notThat(estefania.leGusta(munieco))
+}
+
+////////////////////////////////////////////////////
+
+test "a luisa le gusta el muñeco" {
+  assert.notThat(luisa.leGusta(munieco))
+}
+
+test "a luisa no le gusta la remera" {
+  assert.that(luisa.leGusta(remera))
+}
+
+
+test "a luisa le gusta la placa de cobre" {
+  assert.that(luisa.leGusta(placa))
+}
+
+
+test "el lobo come a caperucita y aumenta de peso" {
+  feroz.comer(caperucita)
+  assert.equals(125, feroz.comer.peso())
+}
+
+test "caperucita pesa 60 kilos" {
+  assert.equals(60, caperucita.peso())
+}
